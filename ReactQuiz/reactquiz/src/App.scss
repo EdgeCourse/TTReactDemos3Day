@@ -1,0 +1,40 @@
+// src/App.scss
+@import './styles/variables';
+@import './styles/mixins';
+
+.app-container {
+  text-align: center;
+
+  .navbar {
+    background-color: #333;
+    padding: 10px;
+
+    .nav-link {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+  }
+
+  .home-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+    font-family: sans-serif; // Added font-family
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: $text-color;
+    }
+
+    .start-button {
+      @include button-style;
+      display: inline-block;
+      background-color: $primary-color;
+      text-decoration: none; 
+    }
+  }
+}
